@@ -1,5 +1,8 @@
 .header {
+  position: sticky;
+  top: 0;
   padding: 26px 0 22px;
+  background-color: var(--neutral-color-10);
 
   @include mobile {
     padding: 22px 0 18px;
