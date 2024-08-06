@@ -106,14 +106,14 @@
       &::before {
         content: '';
         display: inline-block;
-        width: 76px;
         height: 1px;
+        min-width: 76px;
         background-color: var(--neutral-color-100);
-        transform: translateY(-43px);
+        transform: translateY(-40px);
 
-        // @include mini-desktop {
-        //   display: none;
-        // }
+        @include mini-desctop {
+          display: none;
+        }
       }
     }
 

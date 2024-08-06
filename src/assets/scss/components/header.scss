@@ -1,8 +1,12 @@
 .header {
-  position: sticky;
-  top: 0;
+  // position: fixed;
+  // top: 0;
+  // right: 0;
+  // left: 0;
+  // z-index: var(--z-index-3);
   padding: 26px 0 22px;
-  background-color: var(--neutral-color-10);
+  background-color: transparent;
+  transition: all var(--transition);
 
   @include mobile {
     padding: 22px 0 18px;
@@ -84,6 +88,11 @@
       text-align: center;
       color: var(--neutral-color-140);
       transform: translateX(-50%);
+
+      @include small-tablet {
+        top: -28px;
+        font-size: 20px;
+      }
     }
 
     &::before {
@@ -138,7 +147,8 @@
     color: var(--neutral-color-100);
 
     @include small-tablet {
-      line-height: 300%;
+      font-size: 20px;
+      line-height: 200%;
     }
 
     &::after {
