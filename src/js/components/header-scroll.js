@@ -1,13 +1,22 @@
 export const scrollHeader = () => {
   const header = document.querySelector('.header');
+  const hero = document.querySelector('.hero');
   let lastScrollTop = 0;
   document.addEventListener('scroll', () => {
-    // header.style.position = 'sticky';
     const scroll2 = document.documentElement.scrollTop;
-    if (lastScrollTop < scroll2) {
-      if (scroll2 > 50) header.style.top = -200 + 'px';
+    if (scroll2 > 0 && scroll2 < 100) {
+      header.classList.add('header--fixed');
+      hero.style.paddingTop = 83 + 110 + 'px';
+    }
+    if (scroll2 === 0) {
+      header.classList.remove('header--fixed');
+      hero.style.paddingTop = 83 + 'px';
+      header.classList.add('header--show');
+    }
+    if (lastScrollTop < scroll2 && scroll2 > 100) {
+      header.classList.remove('header--show');
     } else {
-      header.style.top = 0 + 'px';
+      header.classList.add('header--show');
     }
     lastScrollTop = scroll2;
   });
