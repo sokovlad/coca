@@ -41,6 +41,10 @@
     --container-width: 860px;
   }
 
+  @include mini-desctop {
+    --container-width: 1000px;
+  }
+
   @include mobile {
     --container-width: 480px;
   }
