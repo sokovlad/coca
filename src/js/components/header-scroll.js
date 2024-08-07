@@ -6,7 +6,7 @@ export const scrollHeader = () => {
     const scroll2 = document.documentElement.scrollTop;
     if (scroll2 > 0 && scroll2 < 100) {
       header.classList.add('header--fixed');
-      hero.style.paddingTop = 83 + 110 + 'px';
+      hero.style.paddingTop = 83 + 117 + 'px';
     }
     if (scroll2 === 0) {
       header.classList.remove('header--fixed');
