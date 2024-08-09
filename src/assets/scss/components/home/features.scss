@@ -1,6 +1,10 @@
 .features {
   padding: 159px 0 94px;
 
+  @include tablet {
+    padding-bottom: 0;
+  }
+
   @include mobile {
     padding: 60px 0;
   }
@@ -116,6 +120,7 @@
   }
 
   &__right {
+    padding-top: 17px;
     max-width: 557px;
 
     @include mini-desctop {
