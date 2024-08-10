@@ -1,0 +1,170 @@
+.testimonials {
+  padding: 69px 0 160px;
+
+  @include mobile {
+    padding: 0 0 50px;
+  }
+
+  &__head {
+    @include flex-all-between;
+    margin-bottom: 48px;
+
+    @include tablet {
+      gap: 20px;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    max-width: 530px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    color: var(--neutral-color-100);
+
+    @include tablet {
+      max-width: 650px;
+    }
+  }
+
+  &__descr {
+    max-width: 376px;
+    font-weight: 500;
+    line-height: 32px;
+    color: var(--neutral-color-150);
+
+    @include tablet {
+      max-width: 470px;
+    }
+  }
+
+  &__rating {
+    @include flex-align-center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: var(--neutral-color-100);
+  }
+
+  &__slider-wrapper {
+    &::before {
+      content: '';
+      display: inline-block;
+      margin-bottom: -16px;
+      width: 115px;
+      height: 77px;
+      background: url('../icons/quotes-icon.svg');
+
+      @include mini-desctop {
+        transform: translateY(-15px);
+      }
+
+      @include mobile {
+        width: 85px;
+        height: 44px;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+
+  &__slider {
+    max-width: 908px;
+  }
+
+  &__comment {
+    &-text {
+      margin-bottom: 40px;
+      font-weight: 500;
+      line-height: 130%;
+      letter-spacing: -1px;
+      color: var(--neutral-color-100);
+    }
+
+    &-author {
+      @include flex-align-center;
+      gap: 24px;
+      font-style: normal;
+
+      &-avatar {
+        overflow: hidden;
+        border-radius: 50%;
+      }
+
+      &-name {
+        margin-bottom: 4px;
+        font-weight: 600;
+        line-height: 26px;
+        color: var(--neutral-color-100);
+      }
+
+      &-professions {
+        font-weight: 500;
+        line-height: 26px;
+        color: var(--neutral-color-150);
+      }
+    }
+  }
+
+  &__btns {
+    @include flex-align-center;
+    position: relative;
+    z-index: var(--z-index-2);
+    gap: 16px;
+    justify-content: flex-end;
+    transform: translate(-5px, -53px);
+
+    @include mini-desctop {
+      transform: translate(-5px, 5px);
+    }
+
+    @include small-mobile {
+      gap: 8px;
+    }
+  }
+
+  &__btn svg {
+    fill: var(--neutral-color-10);
+    transition: var(--transition);
+  }
+
+  &__btn {
+    @include flex-all-center;
+    border: 1px solid var(--neutral-color-40);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--neutral-color-100);
+    transition: var(--transition);
+
+    @include small-mobile {
+      width: 40px;
+      height: 40px;
+    }
+
+    &:hover {
+      background-color: var(--neutral-color-10);
+    }
+
+    &:hover svg {
+      fill: var(--neutral-color-100);
+    }
+  }
+
+  &__btn.swiper-button-disabled {
+    background-color: transparent;
+  }
+
+  [data-theme='dark'] &__btn.swiper-button-disabled {
+    background-color: var(--neutral-color-40);
+  }
+
+  &__btn.swiper-button-disabled svg {
+    fill: var(--neutral-color-40);
+  }
+
+  [data-theme='dark'] &__btn.swiper-button-disabled svg {
+    fill: var(--neutral-color-10);
+  }
+}

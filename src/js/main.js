@@ -4,10 +4,15 @@ import '../assets/scss/main.scss';
 import { useTheme } from './components/theme';
 import { useBurger } from './components/burger';
 import { scrollHeader } from './components/header-scroll';
-import { useInsightSlider } from './components/slider';
-import { usePartnersSlider } from './components/slider';
+import {
+  useInsightSlider,
+  usePartnersSlider,
+  useTestimonialsSlider,
+} from './components/home/slider';
+
 useTheme();
 useBurger();
 scrollHeader();
 useInsightSlider();
 usePartnersSlider();
+useTestimonialsSlider();

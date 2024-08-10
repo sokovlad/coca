@@ -65,3 +65,15 @@ export const usePartnersSlider = () => {
     });
   });
 };
+
+export const useTestimonialsSlider = () => {
+  new Swiper('.testimonials__slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    loop: true,
+    navigation: {
+      prevEl: '.testimonials__btn--prev',
+      nextEl: '.testimonials__btn--next',
+    },
+  });
+};
