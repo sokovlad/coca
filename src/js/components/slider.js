@@ -7,6 +7,10 @@ export const useInsightSlider = () => {
     spaceBetween: 32,
     loop: true,
     centeredSlides: true,
+    pagination: {
+      el: '.insight__slider-pagination',
+      type: 'progressbar',
+    },
     breakpoints: {
       993: {
         centeredSlides: false,
