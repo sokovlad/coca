@@ -117,7 +117,7 @@
       justify-content: center;
     }
 
-    @include small-mobile {
+    @include mobile {
       flex-direction: column;
       align-items: center;
       text-align: center;
@@ -129,10 +129,65 @@
       margin-bottom: 24px;
       font-weight: 700;
       line-height: 24px;
+
+      @include mobile {
+        @include flex-all-center;
+        position: relative;
+        gap: 15px;
+        transition: var(--transition);
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        &::after,
+        &::before {
+          content: '';
+          position: absolute;
+          display: block;
+          background-color: #fff;
+          transition: var(--transition);
+        }
+
+        &::after {
+          right: 0;
+          width: 16px;
+          height: 2px;
+        }
+
+        &::before {
+          right: 7px;
+          width: 2px;
+          height: 16px;
+          transform: rotate(0deg);
+        }
+      }
     }
 
     @include mobile {
       min-width: 143px;
+    }
+  }
+
+  &__sublist {
+    transition: var(--transition);
+
+    @include mobile {
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &--show {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__accordion--opened {
+    &::before {
+      transform: rotate(-90deg);
     }
   }
 
