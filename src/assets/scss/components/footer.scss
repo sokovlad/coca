@@ -1,0 +1,269 @@
+.footer {
+  padding: 112px 0 58px;
+  color: #fff;
+  background-color: var(--black-bg-color);
+
+  @include mobile {
+    padding-top: 62px;
+  }
+
+  &__head {
+    @include flex-all-between;
+    margin-bottom: 134px;
+
+    @include tablet {
+      gap: 30px;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 60px;
+    }
+
+    @include mobile {
+      align-items: center;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+
+  &__descr {
+    max-width: 543px;
+    font-weight: 500;
+    line-height: 32px;
+    color: var(--neutral-color-150);
+  }
+
+  &__btn {
+    @include flex-all-center;
+    border-radius: 100px;
+    padding: 16px 32px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #1d1e25;
+    background: #fff;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 19px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    @include mobile {
+      max-width: 120px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    gap: 144px;
+    margin-bottom: 55px;
+
+    @include mini-desctop {
+      gap: 72px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      gap: 40px;
+      flex-direction: column-reverse;
+    }
+
+    &-info {
+      max-width: 292px;
+
+      @include tablet {
+        @include flex-align-center;
+        gap: 0 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: none;
+        text-align: center;
+      }
+    }
+
+    &-descr {
+      @include tablet {
+        max-width: 600px;
+      }
+      font-weight: 500;
+      line-height: 26px;
+      color: var(--neutral-color-150);
+    }
+  }
+
+  &__nav {
+    width: 100%;
+  }
+
+  &__list {
+    @include flex-all-between;
+    gap: 40px 15px;
+    align-items: flex-start;
+
+    @include small-tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include small-mobile {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    &-title {
+      margin-bottom: 24px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    @include mobile {
+      min-width: 143px;
+    }
+  }
+
+  &__subitem {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &-link {
+      position: relative;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--neutral-color-150);
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        left: 0;
+        height: 1px;
+        background-color: var(--neutral-color-150);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity var(--transition),
+          visibility var(--transition);
+      }
+
+      &:hover {
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    @include flex-all-between;
+    gap: 20px 10px;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--neutral-color-70);
+    padding-top: 40px;
+
+    @include tablet {
+      justify-content: center;
+    }
+
+    &-lists {
+      @include flex-align-center;
+      gap: 72px;
+      flex-wrap: wrap;
+
+      @include tablet {
+        gap: 20px 42px;
+      }
+
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+
+    &-list {
+      @include flex-align-center;
+      gap: 40px;
+
+      @include tablet {
+        gap: 20px;
+      }
+
+      @include small-mobile {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    &-link {
+      position: relative;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: #fff;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        left: 0;
+        height: 1px;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity var(--transition),
+          visibility var(--transition);
+      }
+
+      &:hover {
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__social {
+    &-list {
+      @include flex-align-center;
+      gap: 24px;
+
+      @include tablet {
+        gap: 18px;
+      }
+    }
+
+    &-link {
+      transition: opacity var(--transition);
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__copyright {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
