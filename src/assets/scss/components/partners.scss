@@ -59,7 +59,6 @@
 
   &__list.swiper-wrapper {
     @include mobile {
-      // gap: 0;
       flex-wrap: nowrap;
     }
   }
