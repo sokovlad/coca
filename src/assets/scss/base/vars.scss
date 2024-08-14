@@ -33,10 +33,6 @@
   --container-padding: 15px;
   --container-width: 1200px;
 
-  //   @include mini-desktop {
-  //     --container-width: 1000px;
-  //   }
-
   @include tablet {
     --container-width: 860px;
   }
@@ -58,6 +54,25 @@
   --z-index-2: 2;
   --z-index-3: 3;
   --z-index-4: 4;
+
+  // padding-top
+  --pt-hero-home: 83px;
+  --pt-hero-pricing: 87px;
+
+  @include mobile {
+    --pt-hero-pricing: 40px;
+  }
+
+  @include small-mobile {
+    --pt-hero-pricing: 20px;
+  }
+
+  // header-height
+  --header-height: 118px;
+
+  @include mobile {
+    --header-height: 110px;
+  }
 }
 
 [data-theme='dark'] {
