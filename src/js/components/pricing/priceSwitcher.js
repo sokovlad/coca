@@ -20,14 +20,20 @@ export const usePriceSwitcher = () => {
 
   const setPricesWithSale = () => {
     starterPrice.textContent = `$${priceList.starter.withSale}`;
+    starterPrice.nextElementSibling.textContent = '/ y r';
     popularPrice.textContent = `$${priceList.popular.withSale}`;
+    popularPrice.nextElementSibling.textContent = '/ y r';
     enterprisePrice.textContent = `$${priceList.enterprise.withSale}`;
+    enterprisePrice.nextElementSibling.textContent = '/ y r';
   };
 
   const setPricesDefault = () => {
     starterPrice.textContent = `$${priceList.starter.default}`;
+    starterPrice.nextElementSibling.textContent = '/ mo';
     popularPrice.textContent = `$${priceList.popular.default}`;
+    popularPrice.nextElementSibling.textContent = '/ mo';
     enterprisePrice.textContent = `$${priceList.enterprise.default}`;
+    enterprisePrice.nextElementSibling.textContent = '/ mo';
   };
 
   switcher.checked = true;
