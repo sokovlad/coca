@@ -11,6 +11,8 @@ export const scrollHeader = () => {
         hero.style.paddingTop = `calc(var(--pt-hero-home) + var(--header-height))`;
       } else if (hero.classList.contains('hero--pricing')) {
         hero.style.paddingTop = `calc(var(--pt-hero-pricing) + var(--header-height))`;
+      } else if (hero.classList.contains('hero--contact')) {
+        hero.style.paddingTop = `calc(var(--pt-hero-contact) + var(--header-height))`;
       }
     }
     if (scroll2 === 0) {
@@ -19,6 +21,8 @@ export const scrollHeader = () => {
         hero.style.paddingTop = 'var(--pt-hero-home)';
       } else if (hero.classList.contains('hero--pricing')) {
         hero.style.paddingTop = 'var(--pt-hero-pricing)';
+      } else if (hero.classList.contains('hero--contact')) {
+        hero.style.paddingTop = 'var(--pt-hero-contact)';
       }
       header.classList.add('header--show');
     }
