@@ -9,6 +9,7 @@ import {
   useTestimonialsSlider,
 } from './components/home/slider';
 import { useFooterAccordion } from './components/footer-accordion';
+import { useMap } from './components/map';
 
 useTheme();
 useBurger();
@@ -17,3 +18,4 @@ useInsightSlider();
 usePartnersSlider();
 useTestimonialsSlider();
 useFooterAccordion();
+useMap();

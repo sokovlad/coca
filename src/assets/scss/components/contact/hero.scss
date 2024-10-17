@@ -33,6 +33,11 @@
     @include mobile {
       gap: 36px;
     }
+
+    &-marker {
+      width: 54px;
+      height: 54px;
+    }
   }
 
   &__contacts {
