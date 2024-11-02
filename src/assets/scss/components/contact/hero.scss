@@ -34,9 +34,48 @@
       gap: 36px;
     }
 
+    &-item {
+      background-color: transparent;
+    }
+
     &-marker {
       width: 54px;
       height: 54px;
+    }
+  }
+
+  &__marker {
+    position: relative;
+
+    &-window {
+      position: absolute;
+      top: -90px;
+      left: 50%;
+      display: flex;
+      gap: 8px;
+      flex-direction: column;
+      border-radius: 8px;
+      padding: 12px 16px;
+      width: 180px;
+      box-shadow: 0 16px 24px 0 rgba(30, 30, 30, 0.08);
+      background-color: #fff;
+      transform: translateX(-50%);
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--neutral-color-90);
+    }
+
+    &-descr {
+      color: var(--neutral-color-150);
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px; /* 150% */
     }
   }
 
