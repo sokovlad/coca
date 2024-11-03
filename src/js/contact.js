@@ -10,6 +10,7 @@ import {
 } from './components/home/slider';
 import { useFooterAccordion } from './components/footer-accordion';
 import { useMap } from './components/map';
+import { usePhone } from './components/contact/phone';
 
 useTheme();
 useBurger();
@@ -19,3 +20,4 @@ usePartnersSlider();
 useTestimonialsSlider();
 useFooterAccordion();
 useMap();
+usePhone();
