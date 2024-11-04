@@ -1,3 +1,5 @@
+import photo from '../../assets/icons/maps-location-icon.svg';
+
 export const useMap = () => {
   let themeColor = '#1d1e25';
   if (document.body.dataset.theme === 'dark') {
@@ -7,7 +9,6 @@ export const useMap = () => {
     themeColor = '#fff';
     initMap();
   }
-  // initMap();
   async function initMap() {
     // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
     await ymaps3.ready;
@@ -16,7 +17,6 @@ export const useMap = () => {
       YMapDefaultSchemeLayer,
       YMapDefaultFeaturesLayer,
       YMapMarker,
-      // YMapFeature,
     } = ymaps3;
     // Иницилиазируем карту
     const map = new YMap(
@@ -91,7 +91,7 @@ export const useMap = () => {
     markerDescr.textContent = '100 Smith Street Collingwood VIC 3066AU';
 
     const markerIcon = document.createElement('img');
-    markerIcon.src = '../assets/icons/maps-location-icon.svg';
+    markerIcon.src = photo;
 
     const marker = new YMapMarker(
       {

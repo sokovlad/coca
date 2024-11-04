@@ -1,4 +1,4 @@
-import '../assets/scss/pricing.scss';
+import '/scss/pricing.scss';
 
 import { useTheme } from './components/theme';
 import { useBurger } from './components/burger';
