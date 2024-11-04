@@ -79,8 +79,12 @@
 
     &-label {
       @include flex-column;
+      position: relative;
       gap: 6px;
-      width: 100%;
+
+      @include mobile {
+        width: 100%;
+      }
 
       &-text {
         font-weight: 500;
@@ -100,13 +104,13 @@
       &--small {
         width: 240px;
 
-        @include small-tablet {
-          width: 200px;
-        }
-
         @include mobile {
           width: 100%;
         }
+      }
+
+      &--error {
+        border-color: red;
       }
 
       &--textarea {
@@ -127,6 +131,14 @@
           justify-content: center;
         }
       }
+    }
+
+    &-error {
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      font-size: 12px;
+      color: red;
     }
   }
 

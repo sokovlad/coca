@@ -11,6 +11,7 @@ import {
 import { useFooterAccordion } from './components/footer-accordion';
 import { useMap } from './components/map';
 import { usePhone } from './components/contact/phone';
+import { useForm } from './components/contact/form';
 
 useTheme();
 useBurger();
@@ -21,3 +22,4 @@ useTestimonialsSlider();
 useFooterAccordion();
 useMap();
 usePhone();
+useForm();
