@@ -1,0 +1,85 @@
+.hero {
+  padding-top: 105px;
+
+  &__title {
+    margin-bottom: 118px;
+    max-width: 959px;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 120%;
+    letter-spacing: -3px;
+    color: var(--neutral-color-100);
+  }
+
+  &__content {
+    @include flex-all-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 135px;
+  }
+
+  &__descr {
+    display: flex;
+    gap: 24px;
+    align-items: start;
+    justify-content: center;
+    max-width: 738px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: -1px;
+    color: var(--neutral-color-100);
+
+    &::before {
+      content: '';
+      flex-shrink: 0;
+      margin-top: 23px;
+      width: 76px;
+      height: 1px;
+      background-color: var(--neutral-color-100);
+    }
+  }
+
+  &__decor {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      display: block;
+      width: 112px;
+      height: 112px;
+      background-image: url(../assets/icons/get-in-touch-arrow.png);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__circle {
+    display: block;
+    overflow: visible;
+    width: 112px;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    fill: var(--neutral-color-100);
+
+    & path {
+      fill: none;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+
+    &-line {
+      fill: var(--neutral-color-100);
+    }
+  }
+}
