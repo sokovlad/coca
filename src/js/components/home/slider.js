@@ -81,3 +81,24 @@ export const useTestimonialsSlider = () => {
     },
   });
 };
+
+export const useAboutSlider = () => {
+  new Swiper('.hero__slider', {
+    centeredSlides: true,
+    slidesPerView: 1,
+    initialSlide: 1,
+    spaceBetween: 32,
+    loop: true,
+    pagination: {
+      el: '.hero__slider-pagination',
+      type: 'progressbar',
+    },
+    breakpoints: {
+      576: {
+        centeredSlides: false,
+        slidesPerView: 'auto',
+        initialSlide: 0,
+      },
+    },
+  });
+};

@@ -69,6 +69,10 @@
     --pt-hero-pricing: 20px;
   }
 
+  @include small-tablet {
+    --pt-hero-about: 40px;
+  }
+
   // header-height
   --header-height: 118px;
 
