@@ -88,7 +88,6 @@ export const useAboutSlider = () => {
     slidesPerView: 1,
     initialSlide: 1,
     spaceBetween: 32,
-    loop: true,
     pagination: {
       el: '.hero__slider-pagination',
       type: 'progressbar',
@@ -98,6 +97,23 @@ export const useAboutSlider = () => {
         centeredSlides: false,
         slidesPerView: 'auto',
         initialSlide: 0,
+      },
+    },
+  });
+};
+export const useTeamSlider = () => {
+  new Swiper('.team__slider', {
+    centeredSlides: true,
+    slidesPerView: 1,
+    spaceBetween: 32,
+    pagination: {
+      el: '.team__slider-pagination',
+      type: 'progressbar',
+    },
+    breakpoints: {
+      576: {
+        centeredSlides: false,
+        slidesPerView: 'auto',
       },
     },
   });

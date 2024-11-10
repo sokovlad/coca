@@ -1,6 +1,15 @@
 .hero {
   position: relative;
   padding-top: 105px;
+  padding-bottom: 160px;
+
+  @include tablet {
+    padding-bottom: 80px;
+  }
+
+  @include small-tablet {
+    padding-bottom: 40px;
+  }
 
   &::before {
     content: '';
