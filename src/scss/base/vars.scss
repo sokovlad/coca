@@ -60,6 +60,7 @@
   --pt-hero-pricing: 87px;
   --pt-hero-contact: 90px;
   --pt-hero-about: 105px;
+  --pt-hero-blog: 95px;
 
   @include mobile {
     --pt-hero-pricing: 40px;
@@ -71,6 +72,7 @@
 
   @include small-tablet {
     --pt-hero-about: 40px;
+    --pt-hero-blog: 40px;
   }
 
   // header-height

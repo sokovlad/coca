@@ -101,6 +101,7 @@ export const useAboutSlider = () => {
     },
   });
 };
+
 export const useTeamSlider = () => {
   new Swiper('.team__slider', {
     centeredSlides: true,
@@ -116,5 +117,17 @@ export const useTeamSlider = () => {
         slidesPerView: 'auto',
       },
     },
+  });
+};
+
+export const useBlogSlider = () => {
+  new Swiper('.hero__slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 32,
+    pagination: {
+      el: '.hero__slider-pagination',
+      type: 'progressbar',
+    },
+    breakpoints: {},
   });
 };
