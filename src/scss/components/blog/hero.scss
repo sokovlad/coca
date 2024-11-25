@@ -147,6 +147,15 @@
       line-height: 40px;
       letter-spacing: -1px;
       color: var(--neutral-color-100);
+
+      & a {
+        color: inherit;
+      }
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
     }
 
     &-descr {
@@ -154,6 +163,10 @@
       font-size: 20px;
       line-height: 30px;
       color: var(--neutral-color-150);
+    }
+
+    &--hide.swiper-slide {
+      display: none;
     }
   }
 }
