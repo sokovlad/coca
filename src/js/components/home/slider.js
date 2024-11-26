@@ -131,3 +131,14 @@ export const useBlogSlider = () => {
     breakpoints: {},
   });
 };
+
+export const useArticlesSlider = () => {
+  new Swiper('.articles__slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 32,
+    navigation: {
+      prevEl: '.articles__btn--prev',
+      nextEl: '.articles__btn--next',
+    },
+  });
+};

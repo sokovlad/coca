@@ -1,0 +1,149 @@
+.articles {
+  padding: 160px 0;
+
+  @include tablet {
+    padding: 80px 0;
+  }
+
+  @include mobile {
+    padding: 60px 0;
+  }
+
+  &__top {
+    @include flex-all-between;
+    margin-bottom: 80px;
+
+    @include small-tablet {
+      gap: 16px;
+      flex-direction: column;
+      align-items: start;
+      margin-bottom: 40px;
+    }
+
+    &-left {
+      max-width: 435px;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    letter-spacing: -2px;
+    color: var(--neutral-color-100);
+  }
+
+  &__descr {
+    font-weight: 500;
+    line-height: 32px;
+    color: var(--neutral-color-150);
+  }
+
+  &__btns {
+    @include flex-align-center;
+    position: relative;
+    z-index: var(--z-index-2);
+    gap: 16px;
+    justify-content: flex-end;
+
+    @include mini-desctop {
+      transform: translate(-5px, 5px);
+    }
+
+    @include small-mobile {
+      gap: 8px;
+    }
+  }
+
+  &__btn svg {
+    fill: var(--neutral-color-10);
+    transition: var(--transition);
+  }
+
+  &__btn {
+    @include flex-all-center;
+    border: 1px solid var(--neutral-color-40);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--neutral-color-100);
+    transition: var(--transition);
+
+    @include small-mobile {
+      width: 40px;
+      height: 40px;
+    }
+
+    &:hover {
+      background-color: var(--neutral-color-10);
+    }
+
+    &:hover svg {
+      fill: var(--neutral-color-100);
+    }
+  }
+
+  &__btn.swiper-button-disabled {
+    background-color: transparent;
+  }
+
+  [data-theme='dark'] &__btn.swiper-button-disabled {
+    background-color: var(--neutral-color-40);
+  }
+
+  &__btn.swiper-button-disabled svg {
+    fill: var(--neutral-color-40);
+  }
+
+  [data-theme='dark'] &__btn.swiper-button-disabled svg {
+    fill: var(--neutral-color-10);
+  }
+
+  &__slider {
+    &.swiper {
+      overflow: visible;
+    }
+
+    &-wrapper {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__card {
+    max-width: 407px;
+
+    &:nth-child(3n) {
+      max-width: 473px;
+    }
+
+    &-img {
+      margin-bottom: 24px;
+    }
+
+    &-title {
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 42px;
+      letter-spacing: -1px;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      margin-bottom: 24px;
+      font-weight: 500;
+      line-height: 32px;
+      color: var(--neutral-color-150);
+    }
+
+    &-btn {
+      display: inline-block;
+      border: 1px solid #ced1d8;
+      padding: 16px 32px;
+      text-align: left;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        border-color: var(--neutral-color-100);
+      }
+    }
+  }
+}
