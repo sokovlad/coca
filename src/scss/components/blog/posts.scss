@@ -1,0 +1,76 @@
+.posts {
+  padding: 120px 0;
+  background-color: var(--neutral-color-60);
+
+  @include tablet {
+    padding: 80px 0;
+  }
+
+  @include mobile {
+    padding: 60px 0;
+  }
+
+  &__list {
+    display: grid;
+    gap: 159px 32px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include mini-desctop {
+      row-gap: 80px;
+    }
+
+    @include mobile {
+      gap: 40px 16px;
+    }
+  }
+
+  &__item {
+    max-width: 584px;
+
+    &:nth-child(4n) {
+      margin-top: -41.7%;
+
+      @include tablet {
+        margin-top: 0;
+      }
+    }
+
+    &-img {
+      margin-bottom: 24px;
+
+      @include mobile {
+        margin-bottom: 12px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 24px;
+      font-weight: 600;
+      color: #fff;
+
+      @include mobile {
+        margin-bottom: 12px;
+      }
+
+      & a {
+        color: inherit;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-descr {
+      font-weight: 500;
+      line-height: 32px;
+      color: var(--neutral-color-150);
+    }
+  }
+}
