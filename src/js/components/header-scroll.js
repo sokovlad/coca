@@ -17,6 +17,8 @@ export const scrollHeader = () => {
         hero.style.paddingTop = `calc(var(--pt-hero-about) + var(--header-height))`;
       } else if (hero.classList.contains('hero--blog')) {
         hero.style.paddingTop = `calc(var(--pt-hero-blog) + var(--header-height))`;
+      } else if (hero.classList.contains('hero--post')) {
+        hero.style.paddingTop = `calc(var(--pt-hero-post) + var(--header-height))`;
       }
     }
     if (scroll2 === 0) {
@@ -31,6 +33,8 @@ export const scrollHeader = () => {
         hero.style.paddingTop = 'var(--pt-hero-about)';
       } else if (hero.classList.contains('hero--blog')) {
         hero.style.paddingTop = 'var(--pt-hero-blog)';
+      } else if (hero.classList.contains('hero--post')) {
+        hero.style.paddingTop = 'var(--pt-hero-post)';
       }
       header.classList.add('header--show');
     }
